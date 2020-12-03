@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code Here</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('../partials/header.ejs') -%>
+        <main class="displayvalue">
+            <section id="column-content">
+
+                <img src="<%= qs[0].imageUrl %>" alt="Host Image">
+                <p>
+                    <%= qs[0].details %>
+                </p>
+                <p>
+                    <%= qs[0].dateandtime %>
+                </p>
+                <p>
+                    <%= qs[0].location %>
+                </p>
+
+            </section>
+
+              <aside class="widgetbutton">
+                  <h6>Are you going?</h6>
+                  <form action="/savedConnections" method="POST">
+  						<button id="bt1">Yes</button>
+              <input type="hidden" value="update" name="action"/>
+              <input type="hidden" value="<%=qs[0].connectionName%>" name="connectionName"/>
+  				   <input type="hidden" value="<%=qs[0].connectionTopic%>" name="connectionTopic"/>
+  				   <input type="hidden" value="Yes" name="rsvp"/>
+  					</form>
+  					<form action="/savedConnections" method="POST">
+  						<button id="bt2">No</button>
+              <input type="hidden" value="update" name="action"/>
+  				   <input type="hidden" value="<%=qs[0].connectionName%>" name="connectionName"/>
+  				   <input type="hidden" value="<%=qs[0].connectionTopic%>" name="connectionTopic"/>
+  				   <input type="hidden" value="No" name="rsvp"/>
+  					</form>
+  					<form action="/savedConnections" method="POST">
+  						<button id="bt3">Maybe</button>
+              <input type="hidden" value="update" name="action"/>
+  				   <input type="hidden" value="<%=qs[0].connectionName%>" name="connectionName"/>
+  				   <input type="hidden" value="<%=qs[0].connectionTopic%>" name="connectionTopic"/>
+  				   <input type="hidden" value="Maybe" name="rsvp"/>
+  					</form>
+              </aside>
+
+        </main>
+        <%- include ('../partials/footer.ejs') -%>
+    </div>
+
+
+</body>
+
+</html>

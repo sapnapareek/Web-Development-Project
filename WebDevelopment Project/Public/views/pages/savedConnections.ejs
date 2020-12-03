@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code Here</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('../partials/header.ejs') -%>
+        <main class="displayvalue">
+            <h4>UNCC Coders Events...</h4>
+            <% if(data.length!=0){%>
+            <table>
+                <tr>
+                    <td>Events</td>
+                    <td>Departmet</td>
+                    <td>Going</td>
+                    <td>Change Of Mind?</td>
+                </tr>
+                <% data.forEach(function(Item){%>
+                  <tr>
+                    <td><%= Item.connectionTopic %></td>
+                    <td><%= Item.connectionName %></td>
+                    <td><%= Item.rsvp %></td>
+                    <td>
+                        <form action="/connection/<%= Item.connectionName %>" >
+
+                            <input class="orderUpdate" type="submit" value="Update">
+                        </form>
+                        <form  action="/savedConnections" method="POST">
+                            <input type="hidden" name="connID" value="<%= Item.connectionId %>">
+                            <input class="orderDelete" type="submit" value="Delete">
+                            <input type="hidden" value="delete" name="action"/>
+                           <input type="hidden" value="<%=Item.connectionTopic%>" name="connectionTopic" />
+                          <input type="hidden" value="<%= Item.connectionName%>" name="connectionName" />
+                             <input type="hidden" value="<%= Item.rsvp %>" name="rsvp" />
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
+
+            </table>
+            <% } else { %>
+             No Connections to display
+             <% } %>
+        </main>
+        <%- include ('../partials/footer.ejs') -%>
+    </div>
+</body>
+
+</html>

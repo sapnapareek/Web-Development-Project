@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code Here</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('../partials/header.ejs') -%>
+
+        <%if(error){
+ error.forEach(function(item){%>
+ <h3>Error:"<%=item.msg %>"</h3>
+ <%})}%>
+        <form class="txt" method="post" action="/newConnection">
+          <input type="hidden" value="/images/code2.jpg" id="imageUrl" name="imageUrl" style="width:30%; padding: 1%" required>
+            <label for="connectionTopic">Topic:</label>
+            <input type="text" id="connectionTopic" name="connectionTopic" placeholder="connectionTopic"><br><br>
+            <label for="connectionName">Name:</label>
+            <input type="text" id="connectionName" name="connectionName" placeholder="connectionName"><br><br>
+            <label for="details">Details:</label>
+            <textarea id="details" name="details" rows="4" cols="50" placeholder="details"></textarea><br><br>
+            <label for="location">Where:</label>
+            <input type="text" id="location" name="location" placeholder="location"><br><br>
+            <label for="dateandtime">When:</label>
+            <input type="date" id="dateandtime" name="dateandtime"><br><br>
+            <input type="submit" value="Create Connection">
+
+        </form>
+        <%- include ('../partials/footer.ejs') -%>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code Here</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all">
+</head>
+
+<body>
+    <div class="container">
+        <%- include('../partials/header.ejs') -%>
+        <main>
+            <div id="content" class="containermain clearfix">
+                <section id="column-content">
+                    <div id="lead-in">
+                    </div>
+                    <% category.forEach(function(cat){ %>
+
+                    <div class="column four">
+                        <h3><i><strong>
+                                  <%= cat %></strong></i></h3>
+                        <ul>
+
+
+              <% data.forEach(function(item){
+                  if(cat == item.connectionTopic) { %>
+                          <li><a href="../connection/<%= item.connectionName %>">
+                                  <%= item.connectionName %></a></li>
+                          <% } %>
+                      <%  }); %>
+
+                        </ul>
+
+                        <%  }) %>
+                    </div>
+
+                </section>
+            </div>
+        </main>
+        <%- include ('../partials/footer.ejs') -%>
+    </div>
+</body>
+
+</html>
