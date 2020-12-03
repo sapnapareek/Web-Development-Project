@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+    background-color: #95A5A6;
+    font-family: 'Trebuchet MS';
+}
+
+.Container {
+    width: 90%;
+    min-width: 500px;
+    margin: auto;
+    display: inline-block;
+}
+
+#bt1 {
+    color: red;
+}
+#bt2 {
+    color: red;
+}
+#bt3 {
+    color: red;
+}
+
+.txt {
+    display: block;
+    padding: 15px
+}
+
+#re123 {
+    background-color: #333;
+}
+
+
+
+.navbar navbar-inverse {
+    text-align: center;
+}
+
+.side {
+  margin-right: 0px;
+  float: right;
+  color: white;
+}
+.addhorizontalline {
+    display: inline-block;
+    border-top-style: solid;
+    border-bottom-color: white;
+    border-bottom-width: 2px;
+}
+
+
+
+.displayvalue {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+}
+
+.blockcolor {
+    background-color: black;
+}
+
+.footer {
+    padding: 20px;
+}
+
+#socialf {
+    float: right;
+    display: inline-block;
+    margin-left: 400px;
+    vertical-align: bottom;
+}
+
+#socialt {
+    float: right;
+    display: inline-block;
+    margin-left: 400px;
+    vertical-align: bottom;
+}
+
+ul li {
+    display: inline-block;
+}
+
+li {
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+    display: block;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 20px;
+}
+
+.tablebutton {
+    background-color: black;
+    color: white;
+}
+
+.containermain {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+aside {
+    background: #444;
+    width: 240px;
+    color: #fff;
+    float: left;
+    margin-left: 20px;
+    padding: 30px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+aside .widgetbutton {
+    float: right;
+
+}
+
+.colorred {
+    background-color: red;
+    color: black;
+}
+
+.colorblue {
+    background-color: blue;
+    color: black;
+}
+
+.coloryellow {
+    background-color: yellow;
+    color: black;
+}
+
+aside .widget {
+    margin: 10px 0;
+}
+
+aside .widget:nth-child(2) {
+    margin-top: 40px;
+}
+
+aside .widget h4 {
+    font-weight: 200;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+p.lead {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+#lead-in {
+    margin-bottom: 30px;
+}
+
+#content {
+    padding: 100px 0;
+}
+
+#column-content {
+    width: 700px;
+    float: left;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
