@@ -1,0 +1,26 @@
+DB File:-
+
+1. Create DB
+ - use codehereconnections
+ 
+ 2. Create 3 collections as states below :-
+ 
+ - db.createCollection('connections')
+ - db.createCollection('userconns')
+ - db.createCollection('userdata')
+ 
+ 3. Add Data to the collections- connections
+ 
+ db.connections.insertMany([{connectionId: 'EP01',connectionName: 'JavaCodingChallenge',connectionTopic: 'WebsiteBuildingChallenge',details: 'As in the first assignment, you must have at least 2 categories of connections, with at least 3 connections per category/topic. Note that this means you will need to create the individual data for the additional connections, since there was only individual data for one representative connection required in the first assignment.',dateandtime: 'Feb-28-2020::10.00am-01.00pm',location: 'WoodwordHall D123',imageUrl: '/images/code.jpg'},
+{connectionId: 'EP02',connectionName: 'JavaScriptCodingChallenge',connectionTopic: 'WebsiteBuildingChallenge',details: 'As in the first assignment, you must have at least 2 categories of connections, with at least 3 connections per category/topic. Note that this means you will need to create the individual data for the additional connections, since there was only individual data for one representative connection required in the first assignment.',dateandtime: 'Feb-28-2020::10.00am-01.00pm',location: 'WoodwordHall D123',imageUrl: '/images/code1.png'},
+{connectionId: 'EP03',connectionName: 'JSABC',connectionTopic: 'WebsiteBuildingChallenge',details: 'As in the first assignment, you must have at least 2 categories of connections, with at least 3 connections per category/topic. Note that this means you will need to create the individual data for the additional connections, since there was only individual data for one representative connection required in the first assignment.',dateandtime: 'JAN-28-2020::10.00am-01.00pm',location: 'WoodwordHall D123',imageUrl: '/images/code2.jpg'},
+{connectionId: 'EP04',connectionName: 'LearnJava',connectionTopic: 'CrazyCoder',details: 'As in the first assignment, you must have at least 2 categories of connections, with at least 3 connections per category/topic. Note that this means you will need to create the individual data for the additional connections, since there was only individual data for one representative connection required in the first assignment.',dateandtime: 'Feb-28-2020::10.00am-01.00pm',location: 'WoodwordHall D123',imageUrl: '/images/code3.jpg'},
+{connectionId: 'EP05', connectionName: 'LivePythonLearningClass', connectionTopic: 'CrazyCoder', details: 'As in the first assignment, you must have at least 2 categories of connections, with at least 3 connections per category/topic. Note that this means you will need to create the individual data for the additional connections, since there was only individual data for one representative connection required in the first assignment.', dateandtime: 'MAY-28-2020::10.00am-01.00pm', location: 'WoodwordHall D123', imageUrl: '/images/code.jpg'},
+{connectionId: 'EP06', connectionName: 'JSXYZ', connectionTopic: 'CrazyCoder', details: 'As in the first assignment, you must have at least 2 categories of connections, with at least 3 connections per category/topic. Note that this means you will need to create the individual data for the additional connections, since there was only individual data for one representative connection required in the first assignment.', dateandtime: 'Feb-28-2020::10.00am-01.00pm', location: 'WoodwordHall D159', imageUrl: "/images/code1.png"} ])
+
+4. Add user Data to the user collection 
+
+db.userdata.insert({UserID : "User01", firstName : "Sapna", lastName : "Pareek", username: "spareek@uncc.edu", address1Field : "9547", address2Field : "UT uncc", city : "Charlotte", state : "NC", zipcode : "28262", country : "USA", password: "password"})
+
+
+
